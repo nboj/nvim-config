@@ -19,4 +19,7 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show Diagn
 vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { link = 'Comment' })
 
 vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Goto Definition' })
+
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 return {}
