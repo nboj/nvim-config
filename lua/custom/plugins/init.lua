@@ -1,3 +1,12 @@
+require('lspconfig').rust_analyzer.setup({
+  cmd = { "rust-analyzer" }, -- will use system one from $PATH
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = { allFeatures = true },
+      checkOnSave = true,
+    },
+  },
+})
 -- You can add your own plugins here or in other files in this directory!
 --  I promise not to create any merge conflicts in this directory :)
 --
