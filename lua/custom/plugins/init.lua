@@ -7,6 +7,12 @@ require('lspconfig').rust_analyzer.setup({
     },
   },
 })
+require('lspconfig').nil_ls.setup({
+  cmd = { "nil" }, -- will use system one from $PATH
+})
+require('lspconfig').lua_ls.setup({
+  cmd = { "lua-language-server" }, -- will use system one from $PATH
+})
 -- You can add your own plugins here or in other files in this directory!
 --  I promise not to create any merge conflicts in this directory :)
 --
@@ -31,4 +37,5 @@ vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Got
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 return {}
