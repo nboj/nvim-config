@@ -7,6 +7,7 @@ require('lspconfig').rust_analyzer.setup({
     },
   },
 })
+require('lspconfig').ts_ls.setup({})
 require('lspconfig').nil_ls.setup({
   cmd = { "nil" }, -- will use system one from $PATH
 })
@@ -38,4 +39,6 @@ vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = 'Got
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+vim.opt.conceallevel = 2
 return {}
