@@ -47,7 +47,7 @@ local function open_in_explorer()
 end
 
 -- Keymaps
-vim.keymap.set("n", "<leader>e", open_in_explorer, { desc = "Open system file manager here" })
+vim.keymap.set("n", "<leader>z", open_in_explorer, { desc = "Open system file manager here" })
 
 -- Nice: make it available inside Oil buffers, too
 vim.api.nvim_create_autocmd("FileType", {
