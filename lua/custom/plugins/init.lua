@@ -7,6 +7,9 @@ require('lspconfig').rust_analyzer.setup({
     },
   },
 })
+require('lspconfig').harper_ls.setup({
+  cmd = { "harper-ls" },  -- resolves to the nixpkgs binary
+})
 require('lspconfig').ts_ls.setup({})
 require('lspconfig').nil_ls.setup({
   cmd = { "nil" }, -- will use system one from $PATH
