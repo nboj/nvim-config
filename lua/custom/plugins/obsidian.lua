@@ -42,17 +42,18 @@ return {
   --   -- refer to `:h file-pattern` for more examples
   --   "BufReadPre path/to/my-vault/*.md",
   --   "BufNewFile path/to/my-vault/*.md",
-  -- },
+    -- },
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
+    "hrsh7th/nvim-cmp",
 
     -- see below for full list of optional dependencies 👇
   },
   opts = {
     workspaces = {
       {
-        name = "personal",
+        name = "main",
         path = "~/vaults/main",
       },
     },
