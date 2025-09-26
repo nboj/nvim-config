@@ -1,5 +1,4 @@
 require('lspconfig').rust_analyzer.setup({
-  cmd = { "rust-analyzer" }, -- will use system one from $PATH
   settings = {
     ["rust-analyzer"] = {
       cargo = { allFeatures = true },
@@ -7,16 +6,14 @@ require('lspconfig').rust_analyzer.setup({
     },
   },
 })
-require('lspconfig').harper_ls.setup({
-  cmd = { "harper-ls" },  -- resolves to the nixpkgs binary
-})
+require('lspconfig').basedpyright.setup({ })
+
+require('lspconfig').harper_ls.setup({ })
+require('lspconfig').harper_ls.setup({ })
 require('lspconfig').ts_ls.setup({})
-require('lspconfig').nil_ls.setup({
-  cmd = { "nil" }, -- will use system one from $PATH
-})
-require('lspconfig').lua_ls.setup({
-  cmd = { "lua-language-server" }, -- will use system one from $PATH
-})
+require('lspconfig').nil_ls.setup({ })
+require('lspconfig').lua_ls.setup({ })
+
 -- You can add your own plugins here or in other files in this directory!
 --  I promise not to create any merge conflicts in this directory :)
 --
