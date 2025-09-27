@@ -1,18 +1,3 @@
-require('lspconfig').rust_analyzer.setup({
-  settings = {
-    ["rust-analyzer"] = {
-      cargo = { allFeatures = true },
-      checkOnSave = true,
-    },
-  },
-})
-require('lspconfig').basedpyright.setup({ })
-
-require('lspconfig').harper_ls.setup({ })
-require('lspconfig').harper_ls.setup({ })
-require('lspconfig').ts_ls.setup({})
-require('lspconfig').nil_ls.setup({ })
-require('lspconfig').lua_ls.setup({ })
 
 -- You can add your own plugins here or in other files in this directory!
 --  I promise not to create any merge conflicts in this directory :)
