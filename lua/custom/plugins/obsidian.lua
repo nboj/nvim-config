@@ -31,7 +31,6 @@ end
 -- your mapping (I'd suggest <leader>o instead of '<leader><o>')
 vim.keymap.set('n', '<leader>o', open_in_obsidian, { desc = 'Open in Obsidian' })
 
-
 return {
   'obsidian-nvim/obsidian.nvim',
   version = '*', -- recommended, use latest release instead of latest commit
@@ -61,8 +60,7 @@ return {
       blink = true,
       create_new = true,
     },
-
+    legacy_commands = false,
     -- see below for full list of options 👇
   },
 }
-
