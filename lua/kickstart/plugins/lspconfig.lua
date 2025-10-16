@@ -224,8 +224,6 @@ return {
         basedpyright = {
         },
         sqls = {},
-        ts_ls = {
-        },
         nil_ls = {
         },
         lua_ls = {
