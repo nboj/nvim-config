@@ -225,6 +225,7 @@ return {
         },
         sqls = {},
         cssls = {},
+        html = {},
         nil_ls = {
         },
         lua_ls = {
