@@ -38,7 +38,7 @@ return {
     text = {
       default = nil,
       workspace = function(opts)
-        return 'In ' .. opts.workspace
+        return 'In ' .. opts.workspace .. ' on branch ' .. opts.git_status()
       end,
       viewing = function(opts)
         return 'Viewing ' .. opts.filename
