@@ -38,7 +38,11 @@ return {
     text = {
       default = nil,
       workspace = function(opts)
-        return 'In ' .. opts.workspace
+        if opts.workspace == "cauman" then
+            return 'In home'
+        else
+            return 'In ' .. opts.workspace
+        end
       end,
       viewing = function(opts)
         return 'Viewing ' .. opts.filename
@@ -47,7 +51,11 @@ return {
         return string.format('Editing %s - %s:%s', opts.filename, opts.cursor_line, opts.cursor_char)
       end,
       file_browser = function(opts)
-        return 'Browsing files in ' .. opts.name
+        if opts.name == 'cauman' then
+          return 'Browsing files in home'
+        else
+          return 'Browsing files in ' .. opts.name
+        end
       end,
       plugin_manager = function(opts)
         return 'Managing plugins in ' .. opts.name
