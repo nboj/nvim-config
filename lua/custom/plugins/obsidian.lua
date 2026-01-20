@@ -30,6 +30,14 @@ end
 
 -- your mapping (I'd suggest <leader>o instead of '<leader><o>')
 vim.keymap.set('n', '<leader>o', open_in_obsidian, { desc = 'Open in Obsidian' })
+local obsidian_vault = vim.fn.expand("~/vaults")
+
+vim.keymap.set("n", "<leader>p", function()
+  local buf = vim.api.nvim_buf_get_name(0)
+  if buf ~= "" and vim.startswith(buf, obsidian_vault) then
+    vim.cmd("Obsidian paste_img")
+  end
+end, { desc = "Paste image (Obsidian only)" })
 
 return {
   'obsidian-nvim/obsidian.nvim',
